@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte qualquer CEP de forma fácil e rápida.">
+    <meta name="keywords" content="CEP, consulta de CEP">
+    <title> Consulta de CEP </title>
+    <link rel="stylesheet" href="./assets/css/custom.css?v=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center place-items-center text-center h-screen">
+        <div class="flex flex-col">
+            <h1 class="text-2xl text-white mb-5">Consulta de CEP</h1>
+            <input type="text" id="cep" maxlength="8" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5" placeholder="CEP" required>
+            <button class="bg-gray-50 hover:bg-gray-300 text-black font-bold py-2 px-20 rounded mt-3" onclick="consultar();">
+                <span>Consultar</span>
+            </button>
+            <div class="resultado max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow mt-5 hidden">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" id="cepLabel"></h5>
+                <div class="dados">
+                    <h5 id="enderecoLabel">
+                        Endereço: <span id="endereco"></span>
+                    </h5>
+                    <h5 id="bairroLabel">
+                        Bairro: <span id="bairro"></span>
+                    </h5>
+                    <h5 id="cidadeLabel">
+                        Cidade: <span id="cidade"></span>
+                    </h5>
+                    <h5 id="estadoLabel">
+                        Estado: <span id="estado"></span>
+                    </h5>
+                    <h5 id="paisLabel">
+                        País: <span id="pais"></span>
+                    </h5>
+                </div>
+            </div>
+            <div class="erro bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-5 hidden">
+                <span class="block sm:inline font-bold">CEP não encontrado.</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/script.js?v=55"></script>
+</html>
